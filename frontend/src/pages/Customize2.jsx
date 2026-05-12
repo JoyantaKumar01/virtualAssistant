@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Customize2() {
     const {userData,backendImage,selectedImage,serverUrl,setUserData}=useContext(userDataContext)
-    const [assistantName,setAssistantName]=useState(userData?.AssistantName || "")
+    const [assistantName,setAssistantName]=useState(userData?.assistantName || "")
     const [loading,setLoading]=useState(false)
     const navigate=useNavigate()
 
@@ -42,7 +42,7 @@ function Customize2() {
         {assistantName &&  <button className='min-w-[300px] h-[30px] mt-[30px] text-black font-semibold cursor-pointer bg-white rounded-full text-[19px]' disabled={loading} onClick={()=>{
           handleUpdateAssistant()
           }
-          }>{loading?"Finally Create Your Assistan":"Loading..."}t</button>}
+          }>{loading?"Loading...":"Finally Create Your Assistant"}</button>}
 
     </div>
   )

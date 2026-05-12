@@ -6,7 +6,14 @@ import authRouter from "./routes/auth.routes.js"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import userRouter from "./routes/user.routes.js"
+// app.use(express.json())
+// import dns from "dns"
+// dns.setDefaultResultOrder("ipv4first")
+import dns from "dns";
+import geminiResponse from "./gemini.js"
 
+// DNS সার্ভার
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 const app=express()
 app.use(cors({

@@ -8,6 +8,8 @@ const isAuth=async (req,res,next)=>{
         const verifyToken=await jwt.verify(token,process.env.JWT_SECRET)
         req.userId=verifyToken.userId
 
+        //  req.userId = decoded.id;
+
         next()
     } catch (error) {
         console.log(error)

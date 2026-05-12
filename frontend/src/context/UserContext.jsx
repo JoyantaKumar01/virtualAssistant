@@ -19,7 +19,7 @@ function UserContext({children}) {
         console.log(result.data)
       } catch (error) {
   
-        console.log(error)
+        console.log(null)
         
       } 
 

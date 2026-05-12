@@ -14,7 +14,7 @@ try {
     return uploadResult.secure_url
 } catch (error) {
     fs.unlinkSync(filePath)
-    return res.status(500).jeson({message:"cloudinary error"})
+    return res.status(500).json({message:"cloudinary error"})
 }
 }
 
